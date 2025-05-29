@@ -1,0 +1,24 @@
+Cabeça  
+    - Esqueleto ✅
+    - Muscular ✅
+
+Tronco
+    - Esqueleto ✅
+    - Muscular ✅
+ 
+Membro Superiores ( Barriga )
+    - Esqueleto ✅
+    - Muscular ✅
+
+Membro Inferior 1 ( Quadril )
+    - Esqueleto ✅
+    - Muscular ✅
+
+Membro Inferior 2 ( Joelho )
+    - Esqueleto ✅
+    - Muscular✅
+
+Membro Inferior 3 ( Pé )
+    - Esqueleto ✅
+    - Muscular ✅
+
