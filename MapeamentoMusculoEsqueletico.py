@@ -49,9 +49,9 @@ def obter_pontos(lmList):
     except: pass
     try: centros["Joelho Direito"] = (lmList[25][0], lmList[25][1])
     except: pass
-    try: centros["Pe Direito"] = (lmList[28][0], lmList[28][1])
+    try: centros["Pe Esquerdo"] = (lmList[28][0], lmList[28][1])
     except: pass
-    try: centros["Pe Esquerdo"] = (lmList[27][0], lmList[27][1])
+    try: centros["Pe Direito"] = (lmList[27][0], lmList[27][1])
     except: pass
     return centros
 
