@@ -94,11 +94,29 @@ while True:
             if vid2: vid2.release()
             vid1, vid2 = carregar_videos(parte_selecionada)
 
-        # Desenho dos pontos
+            
+        # AQUI ESTOU CONECTANDO OS PONTOS PARA MELHOR VISUALIZAÇÃO NA CÂMERA, ASSIM FICA MELHOR DE ENXERGAR
+        conexoes = [
+            (11, 12), (11, 23), (12, 24), #ombro/quadril
+            (23, 24), (23, 25), (24, 26), #coxa/quadril
+            (25, 27), (26, 28), # joelho/pe
+            (11, 13), (13, 15), # braço esq
+            (12, 14), (14, 16), # braço dir
+            (0, 11), (0, 12) # cabeça/tronco
+        ]
+        for (p1, p2) in conexoes: #desenhando as linhas entre os pontos com loop pra sempre mostrar
+            try:
+                x1, y1 = lmList[p1][0], lmList[p1][1]
+                x2, y2 = lmList[p2][0], lmList[p2][1]
+                cv2.line(frame, (x1, y1), (x2, y2), (0, 255, 255), 6)
+            except:
+                pass
+
+        # Desenho do circulo se for selecionado 
         for parte, (x, y) in centros.items():
-            cor = (0, 255, 0) if parte == parte_selecionada else (255, 0, 0)
-            cv2.circle(frame, (x, y), 10, cor, cv2.FILLED)
-            cv2.putText(frame, parte, (x - 40, y - 15), cv2.FONT_HERSHEY_SIMPLEX, 0.6, cor, 2)
+            cor = (0, 255, 0) if parte == parte_selecionada else (255, 0, 0) # verde se selecionado
+            cv2.circle(frame, (x, y), 20, cor, cv2.FILLED)
+            cv2.putText(frame, parte, (x - 50, y - 25), cv2.FONT_HERSHEY_SIMPLEX, 1.6, cor, 5) # nome da parte do corpo
 
     # Mostra os vídeos se carregados
     if vid1 and vid2 and frame_count % 3 == 0:
