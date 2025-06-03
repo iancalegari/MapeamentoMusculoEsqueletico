@@ -20,3 +20,4 @@ As tecnologias utilizadas são Python, OpenCV para processamento de vídeo e CvZ
 - Pacotes Python Necessários:
      - opencv-python==4.9.0.80
      - cvzone==1.5.6
+     - pip install opencv-python cvzone numpy mediapipe
